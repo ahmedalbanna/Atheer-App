@@ -1,0 +1,135 @@
+package com.atheer.core.data
+
+import com.atheer.core.model.Video
+import com.atheer.core.model.VideoCategory
+
+/**
+ * Offline demo catalog used to seed an empty database on first launch.
+ */
+object DemoContent {
+
+    private const val GTV = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample"
+
+    val videos: List<Video> = listOf(
+        Video(
+            id = "vid_bunny",
+            title = "مغامرة الأرنب الكبير - رسوم متحركة مبهجة",
+            description = "استمتع بمشاهدة أحدث مغامرات الأرنب الودود في هذا الفيلم الكرتوني عالي الجودة والمليء باللقطات المضحكة والمؤثرة المناسبة لكافة أفراد العائلة.",
+            videoUrl = "$GTV/BigBuckBunny.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800&auto=format&fit=crop",
+            channelName = "قناة كرتون بلس",
+            channelAvatar = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop",
+            views = 125_000,
+            likes = 4_500,
+            duration = "9:56",
+            category = VideoCategory.ENTERTAINMENT,
+        ),
+        Video(
+            id = "vid_sintel",
+            title = "رحلة البحث الكبرى (سينتيل) - خيال ملحمي وثائقي",
+            description = "فيلم خيالي قصير ملحمي يروي قصة فتاة شابة تبحث عن تنينها الصغير الضائع، يبرز جمالية الفن البصري وقوة الترابط العاطفي والتحمل من أجل الحب والصداقة.",
+            videoUrl = "$GTV/Sintel.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop",
+            channelName = "عالم السينما المستقلة",
+            channelAvatar = "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&auto=format&fit=crop",
+            views = 89_000,
+            likes = 3_100,
+            duration = "5:20",
+            category = VideoCategory.ENTERTAINMENT,
+            isSubscribed = true,
+        ),
+        Video(
+            id = "vid_kotlin",
+            title = "دورة البرمجة بلغة كوتلن Kotlin للمبتدئين بلغة بسيطة",
+            description = "في هذا الفيديو التعليمي الشامل، نتعلم أساسيات لغة كوتلن Kotlin وبناء واجهات المستخدم الجميلة باستخدام أحدث تقنيات أندرويد وجيت باك كومبوز (Jetpack Compose).",
+            videoUrl = "$GTV/ForBiggerFun.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
+            channelName = "تعلم برمج بذكاء",
+            channelAvatar = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop",
+            views = 42_000,
+            likes = 2_900,
+            duration = "15:45",
+            category = VideoCategory.EDUCATION,
+        ),
+        Video(
+            id = "vid_steel",
+            title = "تكنولوجيا المستقبل وأعاجيب الروبوتات الطبية",
+            description = "وثائقي يغوص في عالم التكنولوجيا الحيوية وصناعة الأطراف الذكية الطبية لإنقاذ حياة ملايين البشر وتعزيز جودة المعيشة في المستقبل القريب.",
+            videoUrl = "$GTV/TearsOfSteel.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop",
+            channelName = "معرفة بلا حدود - وثائقيات",
+            channelAvatar = "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?w=100&auto=format&fit=crop",
+            views = 204_000,
+            likes = 9_500,
+            duration = "12:14",
+            category = VideoCategory.DOCUMENTARY,
+            isSubscribed = true,
+        ),
+        Video(
+            id = "vid_live1",
+            title = "بث مباشر: مؤتمر مطوري جوجل السنوي والجديد في الذكاء الاصطناعي",
+            description = "تابعوا معنا باللغة العربية البث المباشر الكامل والمترجم فوريًا لتغطية الإعلان الرسمي عن أحدث نماذج جيميناي (Gemini) وميزات أندرويد الثورية.",
+            videoUrl = "$GTV/ElephantsDream.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop",
+            channelName = "شبكة أخبار التقنية",
+            channelAvatar = "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&auto=format&fit=crop",
+            views = 3_300,
+            likes = 850,
+            duration = "مباشر",
+            category = VideoCategory.DOCUMENTARY,
+            isLive = true,
+            liveViewerCount = 7_800,
+        ),
+        Video(
+            id = "short_fun1",
+            title = "عندما تبدأ في تجربة كود برمجي جديد لأول مرة! 💻🤣",
+            description = "مقطع فكاهي قصير يوضح حالة المبرمجين عند تشغيل الأكواد لأول مرة وحجم الأخطاء غير المتوقعة.",
+            videoUrl = "$GTV/ForBiggerBlazes.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+            channelName = "يوميات مبرمج مرح",
+            channelAvatar = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop",
+            views = 77_000,
+            likes = 5_400,
+            duration = "0:15",
+            category = VideoCategory.GAMING,
+            isShort = true,
+        ),
+        Video(
+            id = "short_nature",
+            title = "راحة نفسية خيالية! دقيقة استرخاء تام وسط الغابة 🌲⛰️",
+            description = "لوّن يومك بمشاهد الطبيعة الخلابة وهدوء الريف السويسري. مقطع مصور بدقة فائقة لتصفية الذهن.",
+            videoUrl = "$GTV/ForBiggerEscapes.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&auto=format&fit=crop",
+            channelName = "واحة الاسترخاء",
+            channelAvatar = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop",
+            views = 150_000,
+            likes = 12_000,
+            duration = "0:14",
+            category = VideoCategory.DOCUMENTARY,
+            isShort = true,
+            isSubscribed = true,
+        ),
+        Video(
+            id = "short_car",
+            title = "انطلاق أسرع سيارة دفع رباعي على الطرق الوعرة! 🔥🚗",
+            description = "تحدي قوة محبين وعشاق سيارات الدفع الرباعي والمغامرة في الأودية الوعرة والمجاري المائية.",
+            videoUrl = "$GTV/SubaruOutbackOnStreetAndDirt.mp4",
+            thumbnailUrl = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&auto=format&fit=crop",
+            channelName = "تيربو العرب",
+            channelAvatar = "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop",
+            views = 310_000,
+            likes = 24_000,
+            duration = "0:11",
+            category = VideoCategory.ENTERTAINMENT,
+            isShort = true,
+        ),
+    )
+
+    val comments: List<Pair<String, Pair<String, String>>> = listOf(
+        "vid_bunny" to ("أحمد خالد" to "هذا الفيلم ممتع للغاية وتنزيله ممتاز لمشاهدته بلا إنترنت شكراً لكم!"),
+        "vid_bunny" to ("سارة علي" to "جودة البث ممتازة والأرنب لطيف جداً 🐇❤️"),
+        "vid_kotlin" to ("يزن محمد" to "أفضل شرح للغة كوتلن باللغة العربية، مبسط ورائع 👍"),
+        "vid_steel" to ("أماني حماد" to "التكنولوجيا الطبية تتطور بسرعة خيالية. العلم لا يتوقف."),
+        "vid_live1" to ("ماجد الشريف" to "مستعد لمشاهدة ميزات أندرويد الجديدة! تحديثات شيقة جداً."),
+    )
+}

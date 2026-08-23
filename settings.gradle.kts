@@ -1,27 +1,40 @@
 pluginManagement {
-  repositories {
-    google {
-      content {
-        includeGroupByRegex("com\\.android.*")
-        includeGroupByRegex("com\\.google.*")
-        includeGroupByRegex("androidx.*")
-      }
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
     }
-    mavenCentral()
-    gradlePluginPortal()
-  }
+    // Convention plugins shared with every module.
+    includeBuild("build-logic")
 }
-
-plugins { id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0" }
 
 dependencyResolutionManagement {
-  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-  repositories {
-    google()
-    mavenCentral()
-  }
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
 
-rootProject.name = "My Application"
+rootProject.name = "Atheer"
 
 include(":app")
+include(":core:model")
+include(":core:common")
+include(":core:database")
+include(":core:data")
+include(":core:designsystem")
+include(":core:ui")
+include(":feature:home")
+include(":feature:shorts")
+include(":feature:create")
+include(":feature:subscriptions")
+include(":feature:search")
+include(":feature:library")
+include(":feature:videodetail")

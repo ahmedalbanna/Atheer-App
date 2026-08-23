@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.MyApplication" parent="android:Theme.DeviceDefault.NoActionBar" />
+    <style name="Theme.Atheer" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#FF0F0F0F</item>
+    </style>
 </resources>
